@@ -1,5 +1,6 @@
-var Sequelize = require('sequelize');
-var db = require('../index.js');
+const Sequelize = require('sequelize');
+const db = require('../index.js');
+const Campuses = require('./campuses');
 
 
 module.exports = db.define('students', {
@@ -13,5 +14,11 @@ module.exports = db.define('students', {
     validate: {
       isEmail: true
     }
-  },
+  }
+}, {
+  defaultScope: {
+    include: [
+      { model: Campuses }
+    ]
+  }
 })

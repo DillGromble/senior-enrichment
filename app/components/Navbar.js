@@ -21,8 +21,8 @@ class Navbar extends React.Component {
 
           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul className="nav navbar-nav">
-              <li><a href="#">Campuses</a></li>
-              <li><a href="#">Faculty</a></li>
+              <li><Link to="/campuses">Campuses</Link></li>
+              <li><Link to="/faculty">Faculty</Link></li>
               <li><Link to="/students">Students</Link></li>
             </ul>
 

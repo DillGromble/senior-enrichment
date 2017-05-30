@@ -1,3 +1,31 @@
+.nameTable {
+  width: 65%;
+  margin-left: 55px;
+  display: inline-table;
+}
+
+.nameTable .glyphicon {
+  font-size: 20px;
+  display: block;
+  text-align: center;
+}
+
+.nameTable .btnCell {
+  padding: 8px 0px;
+}
+
+.input-group {
+  position: relative;
+  top: 7px;
+  width: 30%;
+  left: 15px;
+  display: inline-block;
+}
+
+
+/*.form-control {
+  display: inline-block;
+}*/
 
 .footer {
   position: fixed;

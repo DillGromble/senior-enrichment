@@ -11,10 +11,10 @@ const Users = models.Users;
 db.sync()
 .then( () => {
   return Campuses.bulkCreate([
-    { name: 'FullStack Academy', image: 'http://lorempizel.com/400/400/city' },
-    { name: 'Grace Hopper Academy', image: 'http://lorempizel.com/400/400/city' },
-    { name: 'Mars University', image: 'http://lorempizel.com/400/400/city' },
-    { name: 'Greendale Community College', image: 'http://lorempizel.com/400/400/city' }
+    { name: 'FullStack Academy', image: 'http://lorempixel.com/400/400/city' },
+    { name: 'Grace Hopper Academy', image: 'http://lorempixel.com/400/400/city' },
+    { name: 'Mars University', image: 'http://lorempixel.com/400/400/city' },
+    { name: 'Greendale Community College', image: 'http://lorempixel.com/400/400/city' }
     ])
 })
 .then( () => {

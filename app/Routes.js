@@ -7,11 +7,11 @@ import AllCampusesContainer from './containers/AllCampusesContainer';
 import SingleCampusContainer from './containers/SingleCampusContainer';
 
 import AllStudentsContainer from './containers/AllStudentsContainer';
+
+import AllFacultyContainer from './containers/AllFacultyContainer';
+
 import { fetchCampuses, fetchCampus } from './reducers/campuses';
-import { fetchAllStudents } from './reducers/studentsAndFaculty';
-
-
-
+import { fetchAllStudents, fetchAllFaculty } from './reducers/studentsAndFaculty';
 
 
 
@@ -23,6 +23,8 @@ const Routes = props => {
         <IndexRoute component={ AllCampusesContainer } />
         <Route path="/campuses/:campusId" component={ SingleCampusContainer } onEnter={ props.selectCampus } />
         <Route path="/students" component={ AllStudentsContainer } onEnter={ props.loadStudents } />
+        <Route path="/faculty" component={ AllFacultyContainer } onEnter={ props.loadFaculty } />
+        <Route path="*" component={ AllCampusesContainer } />
       </Route>
     </Router>
 )}
@@ -41,6 +43,9 @@ const mapDispatch = dispatch => ({
   },
   loadStudents: () => {
     dispatch(fetchAllStudents())
+  },
+  loadFaculty: () => {
+    dispatch(fetchAllFaculty())
   }
 })
 
